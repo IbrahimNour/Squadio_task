@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/theme/variable.scss";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.d-block {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.mat-form-field-appearance-outline .mat-form-field-prefix {
+  top: -0.2rem !important;
+}

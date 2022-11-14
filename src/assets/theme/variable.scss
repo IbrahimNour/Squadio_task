@@ -1,8 +1,11 @@
 @import "themes.scss";
 
+$main-color: #4b3392;
 $background-color: #f6f7fb;
 $font-color: #828282;
-$font-dark-color: #3d3d3d;
+$font-dark-color: #003a70;
+$hover-color: #ed844e;
+$bloack-color: #707070;
 
 //PRIMARY THEME
 $mat-primary: (
@@ -15,7 +18,7 @@ $mat-primary: (
     (
       // main: $light-color,
       // lighter: $dark-color,
-      // darker: $light-color,,,,,,,,,,,,,
+      // darker: $light-color,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     ),
 );
 
@@ -32,7 +35,7 @@ $mat-accent: (
     (
       // main: $light-color,
       // lighter: $dark-color,
-      // darker: $light-color,,,,,,,,,,,,,
+      // darker: $light-color,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     ),
 );
 
@@ -49,7 +52,7 @@ $mat-warn: (
     (
       // main: $light-color,
       // lighter: $dark-color,
-      // darker: $light-color,,,,,,,,,,,,,
+      // darker: $light-color,,,,,,,,,,,,,,,,,,,,,,,,,,,,
     ),
 );
 $theme-warn: mat-palette($mat-warn, main, lighter, darker);
@@ -57,11 +60,17 @@ $theme-warn: mat-palette($mat-warn, main, lighter, darker);
 $task-light-theme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 
 //$theme: mat-light-theme($primary,$accent,$warn);
-@import "../../app/products/products-theme.scss";
-@import "../../app/components/confirm-modal/confirm-modal.component.scss";
+
+@import "../../app/modules/modules.component.scss";
+@import "../../app/components/side-nav/side-nav.component.scss";
+@import "../../app/modules/users/users-list/users-theme.scss";
+@import "../../app/modules/posts/posts-theme.scss";
+
 @mixin componnent-theme($theme) {
-  @include products-theme($theme);
-  @include model_confirm($theme);
+  @include modules-theme($theme);
+  @include sideMenu-them($theme);
+  @include users-theme($theme);
+  @include posts-theme($theme);
 }
 
 @include angular-material-theme($task-light-theme);

@@ -1,0 +1,39 @@
+@mixin users-theme($theme) {
+  app-users-list {
+    .users-search {
+      width: 100%;
+      padding: 40px;
+      background: url("../../../../assets/images/Path\ 1441.jpg") no-repeat
+        center center;
+      background-size: cover;
+      h1 {
+        color: $font-dark-color;
+        font-weight: bold;
+      }
+
+      form {
+        .search {
+          color: $font-dark-color;
+        }
+      }
+    }
+    table {
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 5%;
+      .table-cell {
+        color: $font-dark-color;
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      .td-cell {
+        font-size: 16px;
+      }
+
+      .mat-header-cell {
+        background: #e7ebf0;
+      }
+    }
+  }
+}

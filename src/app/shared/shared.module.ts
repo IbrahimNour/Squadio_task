@@ -1,4 +1,3 @@
-import { ConfirmModalComponent } from './../components/confirm-modal/confirm-modal.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -11,6 +10,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const MATERIAL_MODULE = [
   FlexLayoutModule,
@@ -22,15 +24,18 @@ const MATERIAL_MODULE = [
   MatIconModule,
   MatButtonModule,
   MatDialogModule,
+  MatSidenavModule,
+  MatTableModule,
+  MatTabsModule,
 ];
 
-const COMPONENTS = [ConfirmModalComponent];
+const COMPONENTS = [];
 
 const MODULES = [FormsModule, ReactiveFormsModule];
 
 @NgModule({
-  declarations: [...COMPONENTS],
+  declarations: [],
   imports: [CommonModule, ...MATERIAL_MODULE, ...MODULES],
-  exports: [...MATERIAL_MODULE, ...MODULES, ...COMPONENTS],
+  exports: [...MATERIAL_MODULE, ...MODULES],
 })
 export class SharedModule {}

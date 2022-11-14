@@ -1,0 +1,15 @@
+@mixin posts-theme($theme) {
+  app-posts {
+    .posts-search {
+      padding: 40px;
+      background: url("../../../assets/images/Path\ 1441.jpg") no-repeat center
+        center;
+      background-size: cover;
+
+      &__tabs {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

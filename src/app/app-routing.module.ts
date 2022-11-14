@@ -5,18 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/products',
-    pathMatch: 'full',
-  },
-  {
-    path: 'products',
     loadChildren: () =>
-      import('./products/products.module').then((m) => m.ProductModule),
+      import('./modules/modules.module').then((m) => m.ModulesModule),
   },
   {
     path: 'not-found',
     component: NotFoundComponent,
   },
+
   {
     path: '**',
     redirectTo: '/not-found',
